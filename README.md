@@ -1,5 +1,7 @@
-# Chicago Policy Review Data Visualizations Mono-Repo
-<img src="./misc/logo.jpg" height="200" title="Chicago Policy Review Logo" alt="Chicago Policy Review Logo"/>
+<h1 align="center">Chicago Policy Review Data Visualizations Mono-Repo</h1>
+<p align="center">
+    <img src="./misc/logo.jpg" height="200" title="Chicago Policy Review Logo" alt="Chicago Policy Review Logo"/>
+</p>
 
 This repository houses all the code and scripts necessary to deploy a visual to the WordPress site or host it externally so that it can be displayed on the WordPress site.
 

@@ -1,0 +1,19 @@
+{
+  "name": "data-visualizations",
+  "version": "1.0.0",
+  "description": "Feature stories by The Chicago Policy Review grouped by year into corresponding folders.",
+  "main": "upload_to_wordpress.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chicago-policy-review/data-visualizations.git"
+  },
+  "author": "Michael Plunkett",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chicago-policy-review/data-visualizations/issues"
+  },
+  "homepage": "https://github.com/chicago-policy-review/data-visualizations#readme"
+}

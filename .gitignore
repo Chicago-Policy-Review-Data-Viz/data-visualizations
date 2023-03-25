@@ -1,6 +1,8 @@
 # IDE files
-.idea
-.vscode
+/.idea
+/.vscode
 
-# General files
-.DS_Store
+# General files and build folders
+**.DS_Store
+.env
+/node_modules

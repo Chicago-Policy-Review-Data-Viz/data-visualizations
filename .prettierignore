@@ -1,2 +1,4 @@
 # File types to ignore
 *.min.html
+README.md
+package-lock.json

@@ -2,3 +2,5 @@
 *.min.html
 README.md
 package-lock.json
+*.R
+*.Rmd

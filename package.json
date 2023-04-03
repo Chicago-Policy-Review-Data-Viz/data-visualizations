@@ -1,0 +1,33 @@
+{
+    "name": "data-visualizations",
+    "version": "1.0.0",
+    "description": "Feature stories by The Chicago Policy Review grouped by year into corresponding folders.",
+    "main": "upload_to_wordpress.js",
+    "scripts": {
+        "create-visual": "mkdir -p ./$npm_config_year/$npm_config_story && cp ./template-visual/* ./$npm_config_year/$npm_config_story",
+        "format": "npx prettier --write .",
+        "lint": "npx eslint .",
+        "process-visual": "npx htmlprocessor ./$npm_config_year/$npm_config_story/index.html -o ./$npm_config_year/$npm_config_story/index.proc.html && npx minify ./$npm_config_year/$npm_config_story/index.proc.html > ./$npm_config_year/$npm_config_story/$npm_config_story.min.html && rm ./$npm_config_year/$npm_config_story/index.proc.html",
+        "wordpress-upload": "export PWD=`pwd` && node ./upload_to_wordpress.js -a=$PWD/$npm_config_year/$npm_config_story -b=$npm_config_story.min.html"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chicago-policy-review/data-visualizations.git"
+    },
+    "author": "Michael Plunkett",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/chicago-policy-review/data-visualizations/issues"
+    },
+    "homepage": "https://github.com/chicago-policy-review/data-visualizations#readme",
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "htmlprocessor": "^0.3.2",
+        "minify": "^9.2.0",
+        "minimist": "^1.2.8",
+        "prettier": "^2.8.7",
+        "wpapi": "^1.2.2"
+    }
+}

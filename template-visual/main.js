@@ -25,5 +25,18 @@ am5.ready(function () {
 
     root.setThemes([am5themes_Animated.new(root), cprTheme]);
 
+    am5plugins_exporting.Exporting.new(root, {
+        menu: am5plugins_exporting.ExportingMenu.new(root, {}),
+        jpgOptions: {
+            maintainPixelRatio: true
+        },
+        pdfOptions: {
+            maintainPixelRatio: true
+        },
+        pngOptions: {
+            maintainPixelRatio: true
+        }
+    });
+
     // All code for your chart goes here
 });

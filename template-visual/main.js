@@ -1,42 +1,38 @@
 // For API and chart documentation please look here:
-// https://www.amcharts.com/demos/
-am5.ready(function () {
-    // Create root element
-    // https://www.amcharts.com/docs/v5/getting-started/#Root_element
-    var root = am5.Root.new('chart-div');
-
-    // Set themes
-    // https://www.amcharts.com/docs/v5/concepts/themes/
-    // Setting themes and default colors
-    var cprTheme = am5.Theme.new(root);
-    cprTheme
-        .rule('ColorSet')
-        .set('colors', [
-            am5.color('#800000'),
-            am5.color('#767676'),
-            am5.color('#FFA319'),
-            am5.color('#C16622'),
-            am5.color('#8F3931'),
-            am5.color('#8A9045'),
-            am5.color('#58593F'),
-            am5.color('#155F83'),
-            am5.color('#350E20')
-        ]);
-
-    root.setThemes([am5themes_Animated.new(root), cprTheme]);
-
-    am5plugins_exporting.Exporting.new(root, {
-        menu: am5plugins_exporting.ExportingMenu.new(root, {}),
-        jpgOptions: {
-            maintainPixelRatio: true
-        },
-        pdfOptions: {
-            maintainPixelRatio: true
-        },
-        pngOptions: {
-            maintainPixelRatio: true
-        }
-    });
+// https://www.highcharts.com/demo
+Highcharts.chart('chart-div', {
+    // Setting default colors
+    colors: [
+        '#800000',
+        '#767676',
+        '#FFA319',
+        '#C16622',
+        '#8F3931',
+        '#8A9045',
+        '#58593F',
+        '#155F83',
+        '#350E20'
+    ],
 
     // All code for your chart goes here
+    title: {
+        text: '[TITLE]',
+        align: 'center'
+    },
+
+    plotOptions: {
+        series: {
+            // PUT PLOT CONFIG OPTIONS HERE SPACE FOR YOUR DATA
+        }
+    },
+
+    series: [
+        {
+            name: '[DATA FIELD NAME]',
+            label: {
+                enabled: false
+            },
+            data: []
+        }
+    ]
 });

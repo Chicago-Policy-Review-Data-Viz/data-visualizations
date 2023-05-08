@@ -38,7 +38,6 @@ This repository houses all the code and scripts necessary to deploy a visual to 
    ```json
    {
      "title": "Example Visual",
-     "caption": "Here is some information about the visual.",
      "description": "Describe your visual"
    }
    ```
